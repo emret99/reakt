@@ -1,0 +1,28 @@
+@use "../variables" as *;
+#search-input{
+    flex-grow: 1;
+    height: 60%;
+    border-radius: 20px;
+    background-color: rgba(120,131,155,.2);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.25rem;
+    padding-left: 1rem;
+    gap: 0.75rem;
+    span{
+        color: rgb(150,159,176);
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+    &:active{
+        border: 1px solid $alternate-text-color;
+    }
+}
+#search-logo{
+    width: 1rem;
+    height: 1rem;
+}

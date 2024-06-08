@@ -1,0 +1,31 @@
+@use "../content/contentpage.scss" as *;
+@use "../variables" as *;
+
+#news-area{
+    @include content-page(row);
+    background-color: rgb(30,32,38);
+    height: 60rem;
+
+}
+#news-text-area{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+#news-text-title{
+    font-size: 3rem;
+    word-spacing: 1.25;
+    font-weight: bold;
+}
+#news-text-desc{
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+#news-text-btn{
+    @include content-btn();
+    width: fit-content;
+}
+#news-card-area{
+    width: 50%;
+}

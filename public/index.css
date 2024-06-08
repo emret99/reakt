@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    box-sizing: border-box;
+    font-family: Optimistic Display, -apple-system, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+    text-decoration: none;
+
+
+}
+*:visited{
+    color: inherit;
+}
+@font-face {
+    font-family: JetbrainsMono-Regular;
+    src: url("./fonts/JetBrainsMono-Regular.ttf");
+}

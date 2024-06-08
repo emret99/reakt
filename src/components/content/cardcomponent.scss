@@ -1,0 +1,128 @@
+@use "../variables" as *;
+
+#card-content-area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5%;
+        div{
+            position: relative;
+            width: 42%;
+            height: 88%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            .header-wrapper{
+                width: 100%;
+                height: 15%;
+                justify-content: center;
+                align-items: center;
+            header{
+                width: 96%;
+                height: 50%;
+
+                }
+            }
+            .card-content{
+                width: 80%;
+                font-size: 1.25rem;
+                font-weight: 300;
+                padding-bottom: 2rem;
+                h5{
+                    width: 100%;
+                    padding-bottom: 0.3rem;
+                    font-size: 2rem;
+                    font-family: 300;
+                    text-align: start;
+                }
+                p{
+                    word-spacing: 0.1rem;
+                    line-height: 1.6;
+                }
+                .logo-area{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 30%;
+                    gap: 1rem;
+                    position: absolute;
+                    left: 0;
+                    bottom: -50px;
+                    img{
+                        background-color: white;
+                        border-radius: 20px;
+                        width: 5.2rem;
+                        height: 5.2rem;
+                        padding: 0.25rem;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    #white-card{
+        background-color: rgb(242,243,245);
+        .header-wrapper{
+            background-color: white;
+            box-shadow: 0px 2px -2px rgb(225, 225, 225);
+
+        }
+        header{
+            background-color: rgb(235,236,239);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            color: $header-text-color;
+
+            img{
+                width: 5%;
+                height: 50%;
+            }
+        }
+        .card-content{
+            color: #1c1e21;
+        }
+        
+    }
+    #dark-card{
+        background-color: rgb(35,39,48);
+        height: 85%;
+        border: 0.6rem  solid black;
+        outline: 1px solid rgb(35,39,48);
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            p{
+                color: rgb(137,146,162);
+                font-size: 0.8rem;
+            }
+            div{
+                display: flex;
+                flex-direction: row;
+                width: 10%;
+                height: 100%;
+                align-items: center;
+                gap: 0.2rem;
+                img{
+                    width: 30%;
+                    margin-bottom: 0.2rem;
+                }
+    
+            }
+        }
+        .card-content{
+            color: white;
+        }
+
+
+    }
+ }

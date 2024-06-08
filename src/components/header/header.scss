@@ -1,0 +1,43 @@
+
+@use "../_variables" as *;
+
+#header{
+    z-index: 1;
+    display: flex;
+    background-color: $background-main;
+    width: 100vw;
+    height: 4rem;
+    color: $header-text-color;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 0.5rem;
+}
+.header-fixed{
+    position: fixed;
+    background-color: rgba($color: $background-main, $alpha: 0.92) !important;
+    backdrop-filter: blur(10px);
+    transition: 300ms;
+
+}
+
+
+#img-anch{
+    width: 3rem;
+    height: 90%;
+
+}
+#react-logo{
+    height: 100%;
+    width: 100%;
+}
+
+#version-text{
+    font-size: smaller;
+    &:hover{
+        text-decoration: underline;
+        color: $alternate-text-color;
+    }
+
+}

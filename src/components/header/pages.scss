@@ -1,0 +1,18 @@
+@use "../variables" as *;
+
+#pages-section{
+    display: flex;
+    color: $text-color-1;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    a{
+        &:hover{
+            background-color: $text-highlighted;
+        }
+        padding: 0.75rem;
+        border-radius: 20px;
+    }
+    
+}
+
+

@@ -1,0 +1,15 @@
+@use "../variables" as *;
+
+#icons-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    a{
+        &:hover{
+            background-color: $text-highlighted;
+        }
+        padding: 0.5rem;
+        border-radius: 2.5rem;
+    }
+}

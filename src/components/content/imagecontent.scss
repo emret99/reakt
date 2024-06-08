@@ -1,0 +1,14 @@
+@use '../variables' as *;
+
+#content-image-area{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    img{
+        border: 0.5rem solid black;
+        outline: 0.25rem solid $background-main;
+        border-radius: 0.5rem;
+        width: 40%;
+    }
+}
