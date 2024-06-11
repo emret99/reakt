@@ -1,7 +1,8 @@
 @use "../variables" as *;
 @mixin content-page($direction){
     width: 100vw;
-    height: 64rem;
+    min-height: 64rem;
+    height: auto;
     padding-top: 5rem;
     padding-bottom: 5rem;
     gap: 2rem;

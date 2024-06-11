@@ -10,7 +10,6 @@ function Hero() {
             <button id="btn-learn">Learn React</button>
             <button id="btn-api">API Reference</button>
         </div>
-
     </div>
   )
 }

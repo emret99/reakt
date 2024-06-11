@@ -2,7 +2,7 @@ import codeIcon from "../../assets/code-svgrepo-com.svg";
 import computerIcon from "../../assets/computer-pc-svgrepo-com.svg";
 import fidgetIcon from "../../assets/fidget-spinner-svgrepo-com.svg";
 
-export default function ContentData() {
+export default function contentData() {
     const data = [
         {
             id:1,
@@ -16,7 +16,7 @@ export default function ContentData() {
             id:2,
             type:"image",
             title:"Write components with code and markup",
-            descFirst:"React components are JavaScript functions. Want to show some content conditionally? Use an if statement. Displaying a list? Try array map(). Learning React is learning programming.",
+            descFirst:"React components are JavaScript functions. Want to show some content conditionally? Use an <span className=\"desc-highlighted\">if</span> statement. Displaying a list? Try array <span className=\"desc-highlighted\">map()</span>. Learning React is learning programming.",
             descLast:"This markup syntax is called JSX. It is a JavaScript syntax extension popularized by React. Putting JSX markup close to related rendering logic makes React components easy to create, maintain, and delete.",
             btnFlag:false
         },
@@ -50,6 +50,7 @@ export default function ContentData() {
             btnText:"Build for native platforms",
             btnIcon:{computerIcon}
         },
+
     ]
 
     return data;

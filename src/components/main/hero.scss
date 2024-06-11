@@ -12,6 +12,7 @@
     flex-direction: column;
     color: $main-text-color;
     font-family: Optimistic Display,-apple-system,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color EmojiOptimistic Display,-apple-system,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    
 }
 
 #hero-react-logo{
@@ -27,6 +28,7 @@
 
 }
 #hero-description{
+    text-align: center;
     font-size: 2.25rem;
     font-weight: 400;
 
@@ -34,8 +36,15 @@
 }
 #btn-area{
     display: flex;
+    flex-direction: row;
     gap: 0.5rem;
     margin-top: 0.75rem;
+    @media (max-width:640px) {
+        flex-direction: column;
+        gap: 0.2rem;
+        width: 80%;
+        
+    }
     button{
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;

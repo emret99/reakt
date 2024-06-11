@@ -1,0 +1,64 @@
+@use "../content/contentpage.scss" as *;
+@use "../variables" as *;
+#ending-section{
+    @include content-page(column);
+    border-top: none;
+    border-bottom: none;
+    min-height: 50%;
+
+
+}
+
+
+#hero-react-logo{
+    width: 10%;
+    height: auto;
+    object-fit: contain;
+    @media (max-width:1024px) {
+        width: 30%;
+        
+    }
+}
+
+#hero-title{
+    font-size: 3.25rem;
+    font-weight: 600;
+    width: 30%;
+    text-align: center;
+    @media (max-width:1024px) {
+        width: 80%;
+        font-size: 2.5rem;
+        
+    }
+
+
+}
+#btn-area{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    @media (max-width:640px) {
+        flex-direction: column;
+        gap: 0.2rem;
+        width: 80%;
+        
+    }
+    button{
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-radius: 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: black;
+        background-color: $alternate-text-color;
+        border: 0.25px solid $header-text-color;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+

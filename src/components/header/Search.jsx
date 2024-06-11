@@ -1,9 +1,17 @@
 import "./search.scss";
 import logo from '../../assets/search.svg';
 
-function Search() {
+function Search({overlay,setOverlay}) {
+  function handleScroll() {
+    window.oncroll=()=>{
+      
+      window.scrollTo(0,0);
+      }
+    setOverlay(true);
+    
+  }
   return (
-    <button id="search-input">
+    <button onClick={handleScroll} id="search-input">
         <img id="search-logo" src={logo} alt="" />
         <span>Search</span>
     </button>

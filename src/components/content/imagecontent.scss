@@ -4,8 +4,16 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
+    @media (max-width:1024px) {
+        flex-direction: column;
+    }
     img{
+        @media (max-width:1024px) {
+            width: 80%;
+                        
+        }
         border: 0.5rem solid black;
         outline: 0.25rem solid $background-main;
         border-radius: 0.5rem;

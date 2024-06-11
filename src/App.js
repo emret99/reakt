@@ -8,13 +8,18 @@ import Header from "./components/header/Header";
 import Hero from "./components/main/Hero";
 import ContentComp from "./components/content/ContentComp";
 import ImageContent from "./components/content/ImageContent";
-import ContentData from "./components/content/ContentData";
+import contentData from "./components/content/contentData";
 import CardContent from "./components/content/CardContent";
 import { useState ,useEffect} from "react";
 import News from "./components/news/News";
+import Overlay from "./components/overlay/Overlay";
+import Slider from "./components/slider/Slider";
+import Ending from "./components/ending/Ending";
+import Footer from "./components/footer/Footer";
+
 
 function App() {
-  const data = ContentData();
+  const data = contentData();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -29,13 +34,16 @@ function App() {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  const [overlay,setOverlay]=useState(false);
+
   return (
+    
     <div className="App">
-      <Header scroll={scrolled}/>
+      {overlay && <Overlay overlay={overlay} setOverlay={setOverlay}/>}
+      <Header overlay={overlay} setOverlay={setOverlay} scroll={scrolled}/>
       <Hero/>
       {data.map(item=>(
         <ContentComp key={item.id} compData={{id:item.id,title:item.title,descFirst:item.descFirst,descLast:item.descLast}} btnData={{flag:item.btnFlag,text:item.btnText,icon:item.btnIcon}}>
@@ -44,7 +52,9 @@ function App() {
         </ContentComp>
       ))}
       <News/>
-
+      <Slider/>
+      <Ending/>
+      <Footer/>
       
     </div>
   );

@@ -1,0 +1,28 @@
+@use "../variables" as *;
+@use "../content/contentpage.scss" as * ;
+
+#slider-main-area{
+    @include content-page(column);
+    overflow-x: hidden;
+    border-bottom: none;
+}
+
+#image-slider-area{
+    display: flex;
+    justify-content: center;
+    height: 14rem;
+    gap: 2rem;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    img{
+        height: auto;
+        width: 18rem;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+}
+
+   

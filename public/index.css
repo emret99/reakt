@@ -12,6 +12,10 @@
     color: inherit;
 }
 @font-face {
-    font-family: JetbrainsMono-Regular;
-    src: url("./fonts/JetBrainsMono-Regular.ttf");
+    font-family: Optimistic Text;
+    src: url("./fonts/Optimistic_Text_W_Rg.woff2");
+}
+@font-face {
+    font-family: Optimistic Display;
+    src: url('./fonts/Optimistic_Display_W_Md.woff2');
 }

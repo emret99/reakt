@@ -2,7 +2,6 @@
 @use "../_variables" as *;
 
 #header{
-    z-index: 1;
     display: flex;
     background-color: $background-main;
     width: 100vw;
@@ -15,10 +14,11 @@
     gap: 0.5rem;
 }
 .header-fixed{
-    position: fixed;
-    background-color: rgba($color: $background-main, $alpha: 0.92) !important;
-    backdrop-filter: blur(10px);
-    transition: 300ms;
+    position: fixed !important;
+    z-index: 999;
+    background-color: rgba($color: $background-main, $alpha: 0.92 )!important;
+    backdrop-filter: blur(10px) ;
+    transition: 300ms ;
 
 }
 
