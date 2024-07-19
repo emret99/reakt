@@ -1,6 +1,7 @@
 import "./app.scss";
 
 
+import { useState ,useEffect} from "react";
 
 
 
@@ -10,18 +11,23 @@ import ContentComp from "./components/content/ContentComp";
 import ImageContent from "./components/content/ImageContent";
 import contentData from "./components/content/contentData";
 import CardContent from "./components/content/CardContent";
-import { useState ,useEffect} from "react";
 import News from "./components/news/News";
 import Overlay from "./components/overlay/Overlay";
 import Slider from "./components/slider/Slider";
 import Ending from "./components/ending/Ending";
 import Footer from "./components/footer/Footer";
+import DisplayMode from "./utils/DisplayMode/DisplayMode";
 
 
 function App() {
   const data = contentData();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
+    localStorage.getItem("displayMode") || localStorage.setItem("displayMode",JSON.stringify({
+      name:"Default",
+      header:true,
+      fullscreen:false
+    }))
     const handleScroll = () => {
       const offset = window.scrollY;
       if (offset > 1) {
@@ -32,6 +38,7 @@ function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
+
 
     return () => {
     };
@@ -55,8 +62,9 @@ function App() {
       <Slider/>
       <Ending/>
       <Footer/>
-      
-    </div>
+      {/* <Testbox/> */}
+      <DisplayMode/>
+      </div>
   );
 }
 
