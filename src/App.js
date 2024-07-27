@@ -29,9 +29,11 @@ function App() {
     (localStorage.getItem("displayMode") && (()=>{
       const data =JSON.parse(localStorage.getItem("displayMode"));
       console.log(data.hasOwnProperty("name")&&data.hasOwnProperty("header")&&data.hasOwnProperty("fullscreen"))
-  
+      return (data.hasOwnProperty("name")&&data.hasOwnProperty("header")&&data.hasOwnProperty("fullscreen"))
+    
       
-    })()) || localStorage.setItem("displayMode",JSON.stringify({
+    })()) ||
+  localStorage.setItem("displayMode",JSON.stringify({
       name:"Default",
       header:true,
       fullscreen:false
