@@ -23,11 +23,22 @@ function App() {
   const data = contentData();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    localStorage.getItem("displayMode") || localStorage.setItem("displayMode",JSON.stringify({
+
+    //fix corrupted localstorage items
+
+    (localStorage.getItem("displayMode") && (()=>{
+      const data =JSON.parse(localStorage.getItem("displayMode"));
+      console.log(data.hasOwnProperty("name")&&data.hasOwnProperty("header")&&data.hasOwnProperty("fullscreen"))
+  
+      
+    })()) || localStorage.setItem("displayMode",JSON.stringify({
       name:"Default",
       header:true,
       fullscreen:false
-    }))
+    }));
+
+    // determine scroll performed or not
+    
     const handleScroll = () => {
       const offset = window.scrollY;
       if (offset > 1) {
@@ -39,10 +50,11 @@ function App() {
 
     window.addEventListener('scroll', handleScroll);
 
-
+    
     return () => {
     };
   }, []);
+
 
   const [overlay,setOverlay]=useState(false);
 

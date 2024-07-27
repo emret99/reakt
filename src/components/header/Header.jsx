@@ -15,7 +15,7 @@ function Header({scroll,overlay,setOverlay}) {
   }
   return (
     <div style={{display:localStorage.getItem("displayMode") && displayHeader().display}} id='header' className={scroll  ? 'header-fixed':''}>
-      <button style={{display:"inherit"}} id="header-hamburger-icon" >
+      <button style={{ display:"inherit"}} id="header-hamburger-icon" >
         <img src={hamburger} alt="" />
       </button>
       <a style={{display:"inherit"}} id="img-anch" href="./"><img id="react-logo" src={logo} alt="" /></a>
